@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiDoctor/[Username]/Appointment Confirmation</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css">
+</head>
+<body>
+
+    <section class="menu">
+        <div class="logos">
+            <img src="images/logo_image1.png" alt="logo">
+        </div>
+        
+        <div class="profile">
+            <i class="fa-regular fa-bell"></i>
+            
+            <a href="#">
+                <img src="images/Doctor_of_Your_Choice.png" alt="Profile">
+                <p>John Doe</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="board">     <!-- contains the visible interface -->
+        <div class="appointmentDetails">  <!-- contains the both divs and title -->
+            <p id="pageTitle">Appointment Confirmation</p>
+            <div class="interface">   <!-- displays flex the two divs -->
+                <form action="#" method="#">
+
+                    <div class="appointmentConfirmation">  <!-- patient details -->
+                        <p id="confirmationpageTitle">Patient's Details:</p>
+                        <label >First name:</label><label id="displayFirstName" ></label><br>
+                        <label >Last name:</label><label id="displayLastName"></label><br>
+                        <label>Gender:</label><label id="displayGender"></label><br>
+                        <label >Phone number:</label><label id="displayPhoneNumber"></label><br>
+                        <label >Email:</label><label id="displayemailaddress"></label><br>
+                        <label >Birth date:</label><label id="displayBirthDate"></label><br>
+                        <label > Insurance:</label><label id="displayinsurance"></label><br>
+                        <label > Medical History:</label><label id="displaymedicalFiles"></label><br>
+                    </div>
+
+                    <div class="appointmentConfirmation">  <!-- appintment details -->
+                            <p id="confirmationpageTitle">Appointment Details:</p>
+                            <label >Hospital name:</label><label id="displayhospital"></label><br>
+                            <label >Speciality:</label><label id="displayspeciality"></label><br>
+                            <label>Medical concern:</label><label id="displaymedicalConcern"></label><br>
+                    </div>
+
+                    <div class="appointmentConfirmation">  <!-- appintment date -->
+                        <p id="confirmationpageTitle">Appointment Date:</p>
+                        
+                        <label>Date:</label><label id="displayprefferedDate"></label><br>
+                </div>
+
+                    <button id="appointmentDetailsButton" class="appointmentDetailsBack">Reset</button>
+                    <input type="submit" id="appointmentDetailsButton" value="Submit">
+                </form>
+    
+               
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        let Fname = document.getElementById("displayFirstName");
+        let Lname = document.getElementById("displayLastName");
+        let Gender = document.getElementById("displayGender");
+        let phone = document.getElementById("displayPhoneNumber");
+        let email = document.getElementById("displayemailaddress");
+        let birthDate = document.getElementById("displayBirthDate");
+        let insurance = document.getElementById("displayinsurance");
+        let medicalFiles = document.getElementById("displaymedicalFiles");
+
+
+
+        Fname.textContent = localStorage.getItem("Firstname")
+        Lname.textContent = localStorage.getItem("Lastname")
+        Gender.textContent = localStorage.getItem("Gender")
+        phone.textContent = localStorage.getItem("phone")
+        email.textContent = localStorage.getItem("email")
+        birthDate.textContent = localStorage.getItem("born_on")
+        insurance.textContent = localStorage.getItem("insurance")
+        medicalFiles.textContent = localStorage.getItem("medicalFiles")
+    </script>
+</body>
+</html>
